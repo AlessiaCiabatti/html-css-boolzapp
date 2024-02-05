@@ -39,3 +39,33 @@ body{
 .whatsapp .big{
   width: 70%;
 }
+
+
+@media screen and (max-width:992px){
+  .container{
+      width: 100%;
+  }
+
+  .container .col{
+    height: 100%;
+  }
+
+  .col.small{
+    width: 10%;
+  }
+
+  .col.big{
+    width: 90%;
+  }
+}
+
+
+@media screen and (max-width:542px){
+  .col.small{
+    width: 0%;
+  }
+
+    .col.big{
+    width: 100%;
+  }
+}
