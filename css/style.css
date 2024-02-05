@@ -30,7 +30,7 @@ body{
 }
 
 .container{
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
   background-color: red;
 }
@@ -58,7 +58,7 @@ img{
 }
 
 .small .bottom{
-  background-color: rgb(242, 225, 157);
+  background-color: rgb(255, 255, 255);
   height: 100%;
   overflow: auto;
 }
@@ -108,7 +108,7 @@ img{
 
 .receive a{
   color: var(--notification);
-  font-size: 10px;
+  font-size: 14px;
 }
 
 /* RESEARCH */
@@ -136,6 +136,12 @@ img{
 .bottom .name-contacts{
   flex-direction: column;
   justify-content: center;
+}
+
+.info-contacts .time,
+.info-contacts p{
+  color: var(--darkgrey);
+  font-size: 12px;
 }
 
 /* colonna grande */
