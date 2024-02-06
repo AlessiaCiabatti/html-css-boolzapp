@@ -3,7 +3,10 @@
   --heavenly: #8edafc;
   --darkgrey: #b1b1b1;
   --lightgrey: #e7e7e7;
-  --notification: #4f7485;
+  --notification: #6f7070;
+  --pearl: #fafafa;
+  --sent: #d5f9ba;
+  --input-sms: #f3eeea;
 }
 
 *{
@@ -14,25 +17,30 @@
 
 body{
   font-family: 'Lato', sans-serif;
-}
+  background: linear-gradient(
+    to bottom,
+    #009688 0%,
+    #009688 15%,
+    #dadbd4 15%,
+    #dadbd4 100%);
+  }
 
 .d-flex{
   display: flex;
 }
 
-.d-bug{
+/* .d-bug{
   background-color: darkkhaki;
   border: 1px solid black;
-}
+} */
 
 .s-bar{
   overflow: auto;
 }
 
 .container{
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
-  background-color: red;
 }
 
 img{
@@ -52,6 +60,11 @@ img{
   flex-direction: column;
 }
 
+.my-info{
+  background-color: var(--lightgrey);
+  padding: 10px 15px;
+}
+
 /* colonna piccola */
 .whatsapp .small{
   width: 30%;
@@ -59,13 +72,11 @@ img{
 
 .small .bottom{
   background-color: rgb(255, 255, 255);
-  height: 100%;
-  overflow: auto;
+  flex-grow: 1;
+  overflow-y: scroll;
 }
 
 .top .my-info{
-  background-color: var(--lightgrey);
-  padding: 10px 15px;
   justify-content: space-between;
   align-items: center;
 }
@@ -88,7 +99,7 @@ img{
 .notification .bell{
   height: 50px;
   width: 50px;
-  background-color: white;
+  background-color: #f2fbff;
   border-radius: 50%;
   justify-content: center;
   align-items: center;
@@ -99,63 +110,169 @@ img{
   color: var(--heavenly);
 }
 
-.notification .receive{
+.notification .get{
   font-size: 16px;
   flex-direction: column;
   justify-content: center;
   margin-left: 15px;
 }
 
-.receive a{
+.get a{
   color: var(--notification);
   font-size: 14px;
+  margin-top: 3px;
 }
 
 /* RESEARCH */
 .research{
+  background-color: var(--pearl);
+  position: relative;
   justify-content: center;
+  align-items: center;
+  height: 55px;
+}
+
+.white{
+  background-color: rgb(255, 255, 255);
+  height: 70%;
+  width: 95%;
+  justify-content: end;
+  align-items: center;
 }
 
 .research input{
-  width: 95%;
-  height: 30px;
-  margin: 8px;
+  height: 100%;
+  width: 85%;
   border-style: none;
 }
 
+.research .fa-magnifying-glass{
+  position: absolute;
+  left: 30px;
+  top: 15px;
+  color: var(--darkgrey);
+}
+
+::placeholder {
+  color: #d7d8da;
+}
+
 /* INFO-CONTACTS */
-.bottom .info-contacts{
+.col .bottom .info-contacts{
   border: 1px solid var(--lightgrey);
   padding: 10px 15px;
+  position: relative;
 }
 
-.bottom img{
-  margin-right: 15px;
-}
-
-.bottom .name-contacts{
+.name-contacts{
   flex-direction: column;
   justify-content: center;
+  margin-left: 15px;
 }
 
-.info-contacts .time,
+.name-contacts h4{
+  margin-bottom: 5px;
+}
+
+.bottom .time,
 .info-contacts p{
   color: var(--darkgrey);
+  font-size: 14px;
+}
+
+.bottom .time{
+  position: absolute;
+  right: 15px;
+  top: 20px;
   font-size: 12px;
 }
 
 /* colonna grande */
 .whatsapp .big{
   width: 70%;
+  background-image: url('/assets/img/mine.jpg');
 }
 
-.big .middle{
-  background-color: rgb(218, 199, 157);
-  height: 100%;
-  overflow: auto;
+.big .name-contacts p{
+  color: var(--notification);
+  font-size: 14px;
 }
 
+.big .my-info{
+  justify-content: space-between;
+  align-items: center;
+}
 
+.big .chat{
+  flex-grow:1;
+  overflow-y: scroll;
+  padding: 50px 90px 0;
+}
+
+.chat .right{
+  flex-direction: column;
+  align-items: end;
+}
+
+.chat .sent{
+  background-color: var(--sent);
+}
+
+.chat .received{
+  background-color: white;
+}
+
+.sms-style{
+  width: 60%;
+  margin-bottom: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  padding-bottom: 20px
+}
+
+.chat i,
+.chat p:last-child{
+  position: absolute;
+  right: 0;
+  color: var(--darkgrey);
+  font-size: 14px;
+}
+
+.chat .write{
+  padding-bottom: 15px;
+  padding-right: 15px;
+}
+
+.chat p:last-child{
+  font-size: 10px;
+  padding: 0 5px;
+}
+
+.chat i{
+  margin: 0 15px;
+}
+
+.big .bottom{
+  background-color: var(--input-sms);
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 28px;
+}
+
+.big .bottom input{
+  flex-grow:1;
+  height: 45px;
+  border-radius: 5px;
+  border-style: none;
+  margin: 0 28px;
+  padding-left: 15px
+}
+
+.big .bottom i{
+  color: var(--notification);
+  font-size: 25px;
+}
 
 
 /*  */
@@ -181,6 +298,10 @@ img{
     width: 90%;
   }
 
+  .big .chat{
+    padding: 40px 45px 0;
+  }
+
   .small .my-info,.info-contacts{
     align-items: center;
     justify-content: center;
@@ -195,5 +316,25 @@ img{
 
     .col.big{
     width: 100%;
+  }
+
+  .big .icons{
+    display: none;
+  }
+
+  .big .chat{
+    padding: 30px 25px 0;
+  }
+
+  .big .bottom i{
+    display: none;
+  }
+  
+  .big .bottom{
+    padding: 10px 10px;
+  }
+
+  .big .bottom input{
+    margin: 0;
   }
 }
