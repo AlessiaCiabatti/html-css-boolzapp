@@ -239,11 +239,6 @@ img{
   font-size: 14px;
 }
 
-.chat .write{
-  padding-bottom: 15px;
-  padding-right: 15px;
-}
-
 .chat p:last-child{
   font-size: 10px;
   padding: 0 5px;
@@ -251,6 +246,40 @@ img{
 
 .chat i{
   margin: 0 15px;
+  cursor: pointer;
+}
+
+.chat .hide{
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 40px;
+  height: 90px;
+  width: 170px;
+  background-color: white;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.chat i:hover + .hide{
+  display: block;
+}
+
+.hide ul{
+  align-items: center;
+  flex-direction: column;
+}
+
+.hide li {
+  list-style: none;
+  padding: 13px 0 10px;
+}
+
+.chat .write{
+  padding-bottom: 15px;
+  padding-right: 15px;
 }
 
 .big .bottom{
