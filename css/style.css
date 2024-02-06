@@ -1,5 +1,4 @@
 :root{
-  --grey: #eaeaea;
   --heavenly: #8edafc;
   --darkgrey: #b1b1b1;
   --lightgrey: #e7e7e7;
@@ -7,6 +6,7 @@
   --pearl: #fafafa;
   --sent: #d5f9ba;
   --input-sms: #f3eeea;
+  --contact: #ffffff;
 }
 
 *{
@@ -23,6 +23,34 @@ body{
     #009688 15%,
     #dadbd4 15%,
     #dadbd4 100%);
+  }
+
+  .dark{
+    --heavenly: #6ba6c2;
+    --darkgrey: #cec6c6;
+    --lightgrey: #323232;
+    --notification: #606060;
+    --pearl: #313131;
+    --sent: #04423d;
+    --input-sms: #303030;
+    --contact: #222222;
+    color: white;
+
+    background: linear-gradient(
+    to bottom,
+    #163635 0%,
+    #163635 15%,
+    #1d282e 15%,
+    #1d282e 100%);
+
+    scrollbar-color: #686868 #2d3132;
+  }
+
+  input{
+    height: 30px;
+    width: 60px;
+    appearance: none;
+    background-color: white;
   }
 
 .d-flex{
@@ -71,8 +99,7 @@ img{
 }
 
 .small .bottom{
-  background-color: rgb(255, 255, 255);
-  flex-grow: 1;
+  background-color: var(--contact);
   overflow-y: scroll;
 }
 
@@ -133,7 +160,7 @@ img{
 }
 
 .white{
-  background-color: rgb(255, 255, 255);
+  background-color: var(--contact);
   height: 70%;
   width: 95%;
   justify-content: end;
@@ -144,6 +171,7 @@ img{
   height: 100%;
   width: 85%;
   border-style: none;
+  background-color: var(--contact);
 }
 
 .research .fa-magnifying-glass{
@@ -219,7 +247,7 @@ img{
 }
 
 .chat .received{
-  background-color: white;
+  background-color: var(--contact);
 }
 
 .sms-style{
@@ -256,7 +284,7 @@ img{
   top: 40px;
   height: 90px;
   width: 170px;
-  background-color: white;
+  background-color: var(--contact);
   border-radius: 5px;
   justify-content: center;
   align-items: center;
@@ -295,14 +323,14 @@ img{
   border-radius: 5px;
   border-style: none;
   margin: 0 28px;
-  padding-left: 15px
+  padding-left: 15px;
+  background-color: var(--contact);
 }
 
 .big .bottom i{
   color: var(--notification);
   font-size: 25px;
 }
-
 
 /*  */
 /*  */
@@ -367,3 +395,5 @@ img{
     margin: 0;
   }
 }
+
+/* darkmode */
