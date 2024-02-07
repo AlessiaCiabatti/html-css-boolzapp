@@ -26,6 +26,7 @@ body{
     #dadbd4 100%);
   }
 
+  /* darkmode */
   .dark{
     --heavenly: #6ba6c2;
     --darkgrey: #cec6c6;
@@ -46,15 +47,21 @@ body{
     #1d282e 100%);
 
     scrollbar-color: #686868 #2d3132;
-    
+
   }
 
-  input{
+  .dark 
+  .big .chat{
+    background-image: url('/assets/img/mine-dark.jpg');
+  }
+    /* /darkmode */
+
+  /* input{
     height: 30px;
     width: 60px;
     appearance: none;
     background-color: white;
-  }
+  } */
 
 .d-flex{
   display: flex;
@@ -185,7 +192,9 @@ img{
 
 /* INFO-CONTACTS */
 .col .bottom .info-contacts{
-  border: 1px solid var(--border);
+  border-top: 1px solid var(--border);
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
   padding: 10px 15px;
   position: relative;
 }
@@ -289,7 +298,7 @@ img{
   z-index: 1;
 }
 
-.chat i:hover + .hide{
+.chat .options:hover .hide{
   display: block;
 }
 
@@ -394,4 +403,3 @@ img{
   }
 }
 
-/* darkmode */
