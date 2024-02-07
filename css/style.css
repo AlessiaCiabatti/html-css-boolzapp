@@ -55,14 +55,7 @@ body{
     background-image: url('/assets/img/mine-dark.jpg');
   }
     /* /darkmode */
-
-  /* input{
-    height: 30px;
-    width: 60px;
-    appearance: none;
-    background-color: white;
-  } */
-
+    
 .d-flex{
   display: flex;
 }
@@ -121,6 +114,26 @@ img{
 
 .my-info i{
     padding-left: 15px;
+}
+
+.my-info button{
+  background-color: var(--lightgrey);
+  border-style: none;
+  font-size: 17px;
+  color: var(--darkgrey);
+  cursor: pointer;
+}
+
+.fa-moon{
+  display: none;
+}
+
+button:active .fa-sun{
+  display: none;
+}
+
+button:active .fa-moon{
+  display: block;
 }
 
 /* NOTIFICATION */
@@ -288,7 +301,7 @@ img{
   display: none;
   position: absolute;
   right: 20px;
-  top: 40px;
+  top: 35px;
   height: 90px;
   width: 170px;
   background-color: var(--contact);
